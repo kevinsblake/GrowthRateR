@@ -23,7 +23,7 @@ Growth curves are commonly used in a microbiological studies to quantify the imp
 
 Install directly from GitHub:
 ```r
-source("https://raw.github.com/kevinsblake/GrowthCurveR/main/growthrate.R")
+source("https://raw.github.com/kevinsblake/GrowthRateR/main/growthrate.R")
 ```
 
 Alternatively, can download and then install using the filepath:
@@ -87,14 +87,14 @@ Calculate maximal growth rate of the cultures in each well then merges with expe
 #### Usage
 
 ```r
-growthcurveR(platefile, platemap, timepoints=5, window=1, time.min=-Inf, time.max=Inf, plate.clean=FALSE)
+growthrateR(platefile, platemap, timepoints=5, window=1, time.min=-Inf, time.max=Inf, plate.clean=FALSE)
 ```
 
 #### Arguments
 
 `platefile`     Dataframe containing plate reader data
 `platemap`      Maps experimental metadata onto plate wells.
-`timepoints`    The frequency measurements were taken (in minutes; default = 10)
+`timepoints`    The frequency measurements were taken (in minutes; default = 5)
 `window`        The length of the window of the rolling regression (in hours; default = 1)
 `time.min`      The lowest timepoint value used. All measurements before this time are masked. (default = -Inf)
 `time.max`      The maximum timepoint value used. All measurements after this time are masked. (default = Inf)
@@ -116,13 +116,13 @@ Plot the growth curve, regressions, and maximal growth rate for a single well.
 #### Usage
 
 ```r
-growthcurveR_single(platefile, timepoints=5, window=1, time.min=-Inf, time.max=Inf, plate.clean=FALSE, well)
+growthrateeR_single(platefile, timepoints=5, window=1, time.min=-Inf, time.max=Inf, plate.clean=FALSE, well)
 ```
 
 #### Arguments
 
 `platefile`     Dataframe containing plate reader data.
-`timepoints`    The frequency measurements were taken (in minutes; default = 10)
+`timepoints`    The frequency measurements were taken (in minutes; default = 5)
 `window`        The length of the window of the rolling regression (in hours; default = 1)
 `time.min`      The lowest timepoint value used. All measurements before this time are masked. (default = -Inf)
 `time.max`      The maximum timepoint value used. All measurements after this time are masked. (default = Inf)
