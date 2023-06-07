@@ -93,11 +93,17 @@ growthrateR(platefile, platemap, timepoints=5, window=1, time.min=-Inf, time.max
 #### Arguments
 
 `platefile`     Dataframe containing plate reader data
+
 `platemap`      Maps experimental metadata onto plate wells.
+
 `timepoints`    The frequency measurements were taken (in minutes; default = 5)
+
 `window`        The length of the window of the rolling regression (in hours; default = 1)
+
 `time.min`      The lowest timepoint value used. All measurements before this time are masked. (default = -Inf)
+
 `time.max`      The maximum timepoint value used. All measurements after this time are masked. (default = Inf)
+
 `plate.clean`   Cleans BioTek Gen 5 plate reader output platefile before processing. (default = FALSE)
 
 #### Examples
