@@ -104,7 +104,7 @@ growthrateR_single <- function(platefile, timepoints=5, window=1, time.min=-Inf,
     mutate(pred = (slope*time2) + intercept)
   
   # Calculate GR
-  growth_rates <- models %>%
+  growth_rate <- models %>%
     filter(slope == max(slope, na.rm = TRUE))
   
   # Plot rolling regression
